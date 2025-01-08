@@ -1,4 +1,4 @@
-# Phone Authentication App
+# Mobile Authentication System
 
 This is a simple Phone Authentication app built using **React** and **Firebase**. It allows users to authenticate using their phone numbers through OTP (One-Time Password) verification. The app uses Firebase Authentication service to send OTPs and verify them.
 
