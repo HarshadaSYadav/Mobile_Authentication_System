@@ -1,74 +1,83 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Phone Authentication App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Phone Authentication app built using **React** and **Firebase**. It allows users to authenticate using their phone numbers through OTP (One-Time Password) verification. The app uses Firebase Authentication service to send OTPs and verify them.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Phone Number Authentication**: Users can enter their phone number and receive an OTP for verification.
+- **OTP Verification**: After receiving the OTP, users can enter it to verify their phone number.
+- **Firebase Integration**: The app uses Firebase Authentication for sending OTPs and confirming them.
+- **Recaptcha Integration**: The app uses Firebase's invisible reCAPTCHA to prevent bots from spamming the phone number authentication process.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: Frontend framework for building the user interface.
+- **Firebase**: Backend service for phone number authentication and OTP management.
+- **HTML/CSS**: For basic webpage structure and styling.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+To run the app locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- You need to have **Node.js** and **npm** installed. If you don't have them, download and install from [Node.js official website](https://nodejs.org/).
+- You also need to set up a **Firebase project**. If you don't have a Firebase account, you can sign up at [Firebase Console](https://console.firebase.google.com/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Steps
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone https://github.com/yourusername/phone-authentication-app.git
+    ```
 
-### `npm run eject`
+2. Change directory to your project folder:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    cd phone-authentication-app
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    npm install
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Set up Firebase:
+    - Go to the [Firebase Console](https://console.firebase.google.com/).
+    - Create a new project.
+    - In the Firebase Authentication section, enable **Phone Authentication**.
+    - Get your Firebase config by going to Project Settings > General > Firebase SDK snippet > Config.
+    - Add your Firebase config to the `firebaseConfig` object in `App.js`.
 
-## Learn More
+5. Run the app:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    npm start
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Mobile_Authentication_System
->>>>>>> fe321e1c36f1e80e93bcc1d83f83dd1812dd9dcb
+    This will start the development server and you can access the app at `http://localhost:3000`.
+## Firebase Configuration
+- To use Firebase in your project, you need to initialize it with your project's credentials. 
+- Replace the values in the firebaseConfig object with your own Firebase project configuration.
+```bash
+const firebaseConfig = {
+  apiKey: 'YOUR_API_KEY',
+  authDomain: 'YOUR_AUTH_DOMAIN',
+  projectId: 'YOUR_PROJECT_ID',
+  storageBucket: 'YOUR_STORAGE_BUCKET',
+  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+  appId: 'YOUR_APP_ID',
+  measurementId: 'YOUR_MEASUREMENT_ID',
+};
+```
+## Troubleshooting
+- Make sure to enable Phone Authentication in your Firebase console.
+- If you face issues with OTP, check that your app is registered with the correct Firebase project.
+  Contributing
+- Fork the repository.
+- Create a new branch (git checkout -b feature-name).
+- Make your changes and commit them (git commit -am 'Add feature').
+- Push to the branch (git push origin feature-name).
+- Open a Pull Request.
